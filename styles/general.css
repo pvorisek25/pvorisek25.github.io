@@ -1,0 +1,31 @@
+body
+{
+	background-color: #232323;
+}
+
+.title   
+{ 
+	color: white; 
+	font-weight: bold; 
+	font-family: Helvetica; 
+	text-align: center; 
+}
+
+.paragraph    
+{ 
+	color: white; 
+	font-family: Helvetica; 
+	text-align: left; 
+}
+
+#page
+{
+	display: flex; 
+	justify-content: center;
+}
+
+#content
+{
+	margin: auto; 
+	width: 50%;
+}
