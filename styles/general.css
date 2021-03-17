@@ -12,10 +12,14 @@ body
 }
 
 .paragraph    
-{ 
-	color: white; 
-	font-family: ZillaSlab; 
+{
 	text-align: left; 
+}
+
+.text
+{
+	color: white; 
+	font-family: ZillaSlab;
 }
 
 .info
@@ -25,23 +29,12 @@ body
 	text-align: center; 
 }
 
-#link
-{
-	color: white;
-	font-family: ZillaSlab;
-}
-
-#link:visited
-{
-	color: white;
-}
-
-#link:hover
+.link:hover
 {
 	color: #88afce;
 }
 
-#link:active
+.link:active
 {
 	color: #88afce;
 }
