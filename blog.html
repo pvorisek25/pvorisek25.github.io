@@ -1,6 +1,4 @@
 ---
-layout: default
-title: Blog
 ---
 <h1>Latest Posts</h1>
 
@@ -12,3 +10,28 @@ title: Blog
     </li>
   {% endfor %}
 </ul>
+
+---
+---
+
+<html>
+	<head>
+	<title>Blog</title>
+	<link href="/styles/general.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="page">
+		<div id="content">
+			{% include navigation.html %}
+			<h1 class="title">Blog</h1>
+			{% for post in site.posts %}
+      <li>
+      <h2 class="title"><a class="link" href="{{ post.url }}">{{ post.title }}</a></h2>
+      {{ post.excerpt }}
+      </li>
+      {% endfor %}
+		</div>
+	</div>
+</body>
+</html>
