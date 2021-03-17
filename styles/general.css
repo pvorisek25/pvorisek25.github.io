@@ -18,6 +18,13 @@ body
 	text-align: left; 
 }
 
+.info
+{
+	color: white; 
+	font-family: ZillaSlab; 
+	text-align: center; 
+}
+
 #page
 {
 	display: flex; 
