@@ -1,14 +1,33 @@
 ---
 ---
 
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-  </head>
-  <body>
-    <h1>{{ "Hello World!" | downcase }}</h1>
-    {% include navigation.html %}
-  </body>
+	<head>
+	<title>Blog</title>
+	<link href="/styles/general.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="page">
+		<div id="content">
+			{% include navigation.html %}
+			<h1 class="title">Pvorisek's page</h1>
+			{% assign post = site.posts[0] %}
+      {% if post %}
+      <h2 class="title"><a class="text link" href="{{ post.url }}">{{ post.title }}</a></h2>
+      <div class="text paragraph">
+				{{ post.excerpt }}
+			</div>
+      {% endif %}
+
+      {% assign post = site.posts[1] %}
+      {% if post %}
+      <h2 class="title"><a class="text link" href="{{ post.url }}">{{ post.title }}</a></h2>
+      <div class="text paragraph">
+				{{ post.excerpt }}
+			</div>
+      {% endif %}
+		</div>
+	</div>
+</body>
 </html>
