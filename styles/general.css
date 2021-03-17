@@ -7,14 +7,14 @@ body
 { 
 	color: white; 
 	font-weight: bold; 
-	font-family: Helvetica; 
+	font-family: ZillaSlab-Bold; 
 	text-align: center; 
 }
 
 .paragraph    
 { 
 	color: white; 
-	font-family: Helvetica; 
+	font-family: ZillaSlab; 
 	text-align: left; 
 }
 
@@ -28,4 +28,16 @@ body
 {
 	margin: auto; 
 	width: 50%;
+}
+
+@font-face 
+{
+    font-family: ZillaSlab-Bold;
+    src: url("/fonts/ZillaSlab-Bold.ttf");
+}
+
+@font-face 
+{
+    font-family: ZillaSlab;
+    src: url("/fonts/ZillaSlab-Regular.ttf");
 }
