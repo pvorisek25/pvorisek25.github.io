@@ -25,6 +25,27 @@ body
 	text-align: center; 
 }
 
+.link
+{
+	color: white;
+	font-family: ZillaSlab;
+}
+
+.link:visited
+{
+	color: white;
+}
+
+.link:hover
+{
+	color: #88afce;
+}
+
+.link:active
+{
+	color: #88afce;
+}
+
 #page
 {
 	display: flex; 
