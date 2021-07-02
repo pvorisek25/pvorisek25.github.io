@@ -124,3 +124,30 @@ body
     font-family: ZillaSlab;
     src: url("/fonts/ZillaSlab-Regular.ttf");
 }
+
+@font-face
+{
+	font-family: LiberationMono;
+	src: url("/fonts/LiberationMono-Regular.ttf");
+}
+
+.highlight
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+pre
+{
+	overflow-x: scroll;
+}
+
+code
+{
+	
+	font-size: 18px;
+	font-family: LiberationMono;
+	
+}
