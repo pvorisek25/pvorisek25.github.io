@@ -1,0 +1,64 @@
+<html>
+	<head>
+	<title>Lorem Ipsum - Website Name</title>
+	<link href="/styles/general.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+</head>
+
+<body>
+	<div id="page">
+		<div id="content">
+			<div id="navigation">
+	<div class="inner-content">
+		<nav style="text-align: left;">
+			<p class="pagename">Pvorisek's page</p>
+		</nav>
+		<nav style="text-align: left;">
+			<a class="text navlink navelement" href="/">Home</a>
+			<a class="text navlink navelement" href="/blog.html">Blog</a>
+			<a class="text navlink navelement" href="/aboutme.html">About me</a>
+		</nav>
+	</div>
+</div>
+			<div id="paragraph">
+				<div class="inner-content">
+					<h1 class="title" style="text-align: left;">Lorem Ipsum</h1>
+					<p class="info"><em>02 Jul 2021 - Marcus Tullius Cicero</em></p>
+					<div class="text paragraph">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus, nunc laoreet porta volutpat, massa orci rutrum tellus, sit amet vestibulum libero enim id massa.</p>
+
+<p>Nam semper urna sit amet metus auctor iaculis. Nam blandit, ante vitae vestibulum tristique, turpis ex faucibus diam, nec porttitor libero ex nec eros. Fusce ornare a neque sit amet congue. Aenean accumsan iaculis diam ac lacinia. Quisque convallis pretium risus et tempus. Proin sem mauris, scelerisque ut accumsan eget, rhoncus sit amet ipsum.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Crappy code</span>
+<span class="nx">ftpd</span><span class="p">.</span><span class="nx">registerProcessor</span><span class="p">(</span><span class="dl">"</span><span class="s2">isDir</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">:</span> <span class="nx">events</span><span class="p">.</span><span class="nx">IsDirRequest</span><span class="p">,</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">Path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">base</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">path</span><span class="p">);</span>
+ 
+    <span class="nx">callback</span><span class="p">(</span><span class="k">new</span> <span class="nx">events</span><span class="p">.</span><span class="nx">IsDirResponse</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">existsSync</span><span class="p">(</span><span class="nx">path</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">lstatSync</span><span class="p">(</span><span class="nx">path</span><span class="p">).</span><span class="nx">isDirectory</span><span class="p">()));</span>
+<span class="p">});</span>
+ 
+<span class="nx">ftpd</span><span class="p">.</span><span class="nx">registerProcessor</span><span class="p">(</span><span class="dl">"</span><span class="s2">readFile</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">:</span> <span class="nx">events</span><span class="p">.</span><span class="nx">ReadFileRequest</span><span class="p">,</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">Path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">base</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">path</span><span class="p">);</span>
+ 
+    <span class="kd">const</span> <span class="k">from</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="nx">path</span><span class="p">,</span> <span class="p">{</span><span class="na">flags</span><span class="p">:</span><span class="dl">"</span><span class="s2">r</span><span class="dl">"</span><span class="p">});</span>
+    <span class="k">from</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="k">new</span> <span class="nx">events</span><span class="p">.</span><span class="nb">Error</span><span class="p">());</span>
+    <span class="p">});</span>
+    <span class="k">from</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">"</span><span class="s2">end</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="k">new</span> <span class="nx">events</span><span class="p">.</span><span class="nx">ReadFileResponse</span><span class="p">());</span>
+    <span class="p">});</span>
+ 
+    <span class="k">from</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">socket</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>Vivamus in orci a quam vestibulum euismod. Donec blandit, tortor eget fermentum ultrices, diam augue ullamcorper massa, id condimentum orci magna sit amet velit. Pellentesque a facilisis lacus. Pellentesque a lectus nec ex efficitur interdum. Fusce interdum lorem nec neque dapibus, sit amet tempus metus vehicula. Nunc vehicula non odio at congue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales tempor libero, et sodales urna pharetra non. Nunc aliquet ornare lacus, nec ornare justo fermentum eu. Cras vel eleifend nulla.</p>
+
+<p>Donec purus velit, auctor sit amet sodales vulputate, sagittis in eros. Pellentesque elit arcu, viverra et pharetra ac, condimentum nec sapien. Etiam ultricies lorem id laoreet eleifend. Duis malesuada felis vitae condimentum aliquet. Nunc sodales congue lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus finibus velit sed felis dictum, sit amet laoreet tellus iaculis. Duis posuere efficitur elit eu consequat. Pellentesque vitae nisi gravida leo gravida gravida. Pellentesque congue purus diam, in bibendum sapien hendrerit sit amet. Fusce eu condimentum ante. Nullam hendrerit ipsum et felis consectetur, vitae hendrerit massa sagittis. Fusce sodales nunc id imperdiet efficitur. Aenean mattis laoreet magna, sed tincidunt nulla laoreet ut. Sed rutrum egestas orci non commodo. Aliquam egestas eros ac vehicula sollicitudin.</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

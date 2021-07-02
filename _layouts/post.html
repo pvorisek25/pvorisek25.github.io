@@ -5,17 +5,21 @@
 	<head>
 	<title>{{ page.title }} - Website Name</title>
 	<link href="/styles/general.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 </head>
 
 <body>
 	<div id="page">
 		<div id="content">
 			{% include navigation.html %}
-			<h1 class="title">{{ page.title }}</h1>
-			<p class="info"><b style="color: #9cdcda">Author: </b>{{ page.author }}</p>
-			<p class="info"><b style="color: #e8894b">Date: </b>{{ page.date | date_to_string }}</p>
-			<div class="text paragraph">
-				{{ content }}
+			<div id="paragraph">
+				<div class="inner-content">
+					<h1 class="title" style="text-align: left;">{{ page.title }}</h1>
+					<p class="info"><em>{{ page.date | date_to_string }} - {{ page.author }}</em></p>
+					<div class="text paragraph">
+						{{ content }}
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
