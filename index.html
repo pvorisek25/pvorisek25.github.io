@@ -15,18 +15,14 @@
 				<div class="inner-content">
 					{% assign post = site.posts[0] %}
 					{% if post %}
-					<h2 class="title"><a class="text link" href="{{ post.url }}">{{ post.title }}</a></h2>
-					<div class="text paragraph">
-						{{ post.excerpt }}
-					</div>
+					{% capture date %}{{post.date | date_to_string}}{% endcapture %}
+					{% include preview.html url=post.url title=post.title excerpt=post.excerpt date=date %}
 					{% endif %}
 
 					{% assign post = site.posts[1] %}
 					{% if post %}
-					<h2 class="title"><a class="text link" href="{{ post.url }}">{{ post.title }}</a></h2>
-					<div class="text paragraph">
-						{{ post.excerpt }}
-					</div>
+					{% capture date %}{{post.date | date_to_string}}{% endcapture %}
+					{% include preview.html url=post.url title=post.title excerpt=post.excerpt date=date %}
 					{% endif %}
 				</div>
 			</div>

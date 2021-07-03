@@ -11,7 +11,8 @@ body
 	color: white; 
 	font-weight: bold; 
 	font-family: $title-font; 
-	text-align: center;
+	font-size: 28px;
+	text-align: left;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
@@ -51,6 +52,7 @@ body
 .navelement
 {
 	font-size: 19px;
+	font-family: OpenSansLight;
 	margin-right: 20px;
 }
 
