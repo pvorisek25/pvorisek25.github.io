@@ -1,3 +1,6 @@
+$title-font: OpenSansRegular;
+$main-font: OpenSansLight;
+
 body
 {
 	background-color: #242424;
@@ -7,7 +10,7 @@ body
 { 
 	color: white; 
 	font-weight: bold; 
-	font-family: ZillaSlab-Bold; 
+	font-family: $title-font; 
 	text-align: center;
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -21,7 +24,7 @@ body
 .pagename
 {
 	color: white;
-	font-family: ZillaSlab;
+	font-family: $main-font;
 	font-weight: bold;
 	font-size: 50px;
 	padding-bottom: 0px;
@@ -32,14 +35,14 @@ body
 .text
 {
 	color: white; 
-	font-family: ZillaSlab;
+	font-family: $main-font;
 	font-size: 20px;
 }
 
 .info
 {
 	color: white; 
-	font-family: ZillaSlab; 
+	font-family: $main-font; 
 	text-align: left;
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -92,14 +95,12 @@ body
 
 #page
 {
-	display: flex; 
-	justify-content: center;
 }
 
 #content
 {
 	margin: auto; 
-	width: 50%;
+	max-width: 1000px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -129,6 +130,18 @@ body
 {
 	font-family: LiberationMono;
 	src: url("/fonts/LiberationMono-Regular.ttf");
+}
+
+@font-face
+{
+	font-family: OpenSansRegular;
+	src: url("/fonts/OpenSans-Regular.ttf")
+}
+
+@font-face
+{
+	font-family: OpenSansLight;
+	src: url("/fonts/OpenSans-Light.ttf")
 }
 
 img
