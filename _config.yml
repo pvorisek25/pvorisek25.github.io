@@ -1,5 +1,5 @@
-site.title: Pvorisek's page
-site.description: Desc
+title: Pvorisek's page
+description: Desc
 
 # Conversion
 markdown:    kramdown

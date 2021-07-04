@@ -1,5 +1,5 @@
 ---
-title: Blog
+title: About me
 ---
 
 <html>
@@ -11,10 +11,8 @@ title: Blog
 			{% include navigation.html %}
 			<div id="paragraph">
 				<div class="inner-content">
-					{% for post in site.posts %}
-					{% capture date %}{{post.date | date_to_string}}{% endcapture %}
-					{% include preview.html url=post.url title=post.title excerpt=post.excerpt date=date %}
-      				{% endfor %}
+					<p class="title">Under construction!</p>
+                    <p class="text">In the meanwhile, you can visit my <a class="navlink" href="https://github.com/pvorisek25">GithubPage</a>!</p>
 				</div>
 			</div>
 		</div>
