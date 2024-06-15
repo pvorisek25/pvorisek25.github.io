@@ -1,0 +1,9 @@
+h1, h2, h3, a, p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 5px 20%;
+    padding: 5px;
+    border: solid 1px black;
+}

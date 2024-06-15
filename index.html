@@ -1,30 +1,14 @@
----
-title: Home
----
-
 <html>
-{% include head.html page=page.title site=site.title %}
+    <head>
+        <title>pvorisek25's homepage</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
-	<div id="page">
-		<div id="content">
-			{% include navigation.html %}
-			<div id="paragraph">
-				<div class="inner-content">
-					{% assign post = site.posts[0] %}
-					{% if post %}
-					{% capture date %}{{post.date | date_to_string}}{% endcapture %}
-					{% include preview.html url=post.url title=post.title excerpt=post.excerpt date=date %}
-					{% endif %}
-
-					{% assign post = site.posts[1] %}
-					{% if post %}
-					{% capture date %}{{post.date | date_to_string}}{% endcapture %}
-					{% include preview.html url=post.url title=post.title excerpt=post.excerpt date=date %}
-					{% endif %}
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
+    <body>
+        <h1 style="text-align: center;">Welcome to my homepage!</h1>
+        <iframe src="nav.html" frameborder="0" height="30" width="100%" scrolling="no"></iframe>
+        <p><b>You might have noticed, but in the case you haven't, this site is under construction</b></p>
+        <h2>About me</h2>
+        <p>I am an IT student.</p>
+    </body>
 </html>
